@@ -5,36 +5,34 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/groundman"
     tools:context=".startscreen">
 
     <Button
         android:id="@+id/Play"
-        android:layout_width="126dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="372dp"
-        android:text="Play!"
+        android:layout_width="98dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginLeft="308dp"
+        android:text="Credit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="270dp"
-        android:layout_height="185dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="488dp"
-        android:text="Question: what is your Comment for Jin?"
+        android:layout_width="122dp"
+        android:layout_height="29dp"
+        android:text="SP 19 final project"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quit"
-        android:layout_width="143dp"
+        android:layout_width="93dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="512dp"
-        android:text="Jin the hideous"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="556dp"
+        android:text="Quit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,9 +40,52 @@
         android:id="@+id/truth"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="512dp"
-        android:text="Toast to the handsome Jin!!"
+        android:layout_marginStart="252dp"
+        android:layout_marginLeft="252dp"
+        android:layout_marginTop="556dp"
+        android:text="Go set alarm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="66dp"
+        android:layout_height="69dp"
+        app:srcCompat="@drawable/like"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="the most handsome person in the world"
+        tools:layout_editor_absoluteX="740dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="✍😍Help me!!!"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="686dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show handsome"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/me"
+        tools:layout_editor_absoluteX="0dp" />
+
 </android.support.constraint.ConstraintLayout>

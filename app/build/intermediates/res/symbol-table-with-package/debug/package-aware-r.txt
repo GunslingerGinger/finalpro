@@ -369,6 +369,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color background
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -428,6 +429,8 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text
+color text2
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -505,6 +508,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -536,6 +541,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen text_size
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -632,6 +638,8 @@ drawable adsfasdf
 drawable groundman
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable like
+drawable me
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -682,6 +690,9 @@ id beginning
 id blocking
 id bottom
 id button
+id button2
+id button3
+id button4
 id buttonPanel
 id center
 id center_horizontal
@@ -709,6 +720,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id forever
+id goback
 id gone
 id group_divider
 id groups
@@ -718,6 +730,8 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton5
+id imageView
 id info
 id invisible
 id italic
@@ -783,10 +797,13 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
+id textClock
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
+id textView3
 id time
+id timePicker
 id title
 id titleDividerNoCustom
 id title_template
@@ -833,6 +850,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout instruction
 layout intro
 layout notification_action
 layout notification_action_tombstone
