@@ -40,11 +40,16 @@ public class intro extends AppCompatActivity {
                     currentHourAndMinute[0] = firstPartAsInt.toString();
                     currentHourAndMinute[1] = currentHourAndMinute[1].substring(0,2);
                     String currentTimeAsString = currentHourAndMinute[0] + currentHourAndMinute[1];
-                    int currentTimeAsInt = Integer.parseInt(currentTimeAsString);
-                    if (currentTimeAsInt > firstSetTimeAsInt && currentTimeAsInt < lastSetTimeAsInt) {
-                        if ()
+                    Integer currentTimeAsInt = Integer.parseInt(currentTimeAsString);
+
+                    int checkThatATimeMatched = 0;
+                    for (Integer alarms : allAlarmTimesAsInts()) {
+                        if (currentTimeAsInt.equals(alarms)) {
                             simpleRingtone.play();
-                    } else {
+                            checkThatATimeMatched++;
+                        }
+                    }
+                    if (checkThatATimeMatched == 0) {
                         simpleRingtone.stop();
                     }
                 }
@@ -60,7 +65,11 @@ public class intro extends AppCompatActivity {
     public int spacingBetweenAlarms() {
         Integer alarmSpacing = 5;
 
-        //create textbox to set alarmSpacing when typed in
+        //create textbox to set alarmSpacing to a value when typed in
+        //
+        //
+        //
+        //
 
         if (!(alarmSpacing instanceof Integer)) {
             alarmSpacing = 5;
@@ -71,12 +80,17 @@ public class intro extends AppCompatActivity {
         if (alarmSpacing < 1) {
             alarmSpacing = 1;
         }
+        return alarmSpacing;
     }
     public boolean enableAlarms() {
         boolean alarmOnOrOff = false;
 
         //create a button that switches between and displays on or off and sets alarmOnOrOff to true
         //or false accordingly. This controls alarms working or not.
+        //
+        //
+        //
+        //
 
         return alarmOnOrOff;
     }
@@ -136,13 +150,23 @@ public class intro extends AppCompatActivity {
         String currentStartAlarm = "";
 
         //create button to call SetStartAlarmTime and set currentStartAlarm equal to it when clicked
+        //
+        //
+        //
+        //
+        //
 
         return currentStartAlarm;
     }
     public String currentFinalAlarmTime() {
         String currentFinalAlarm = "";
 
-        //create button to call SetFinalAlarmTime and set currentfinalalarm equal to it when clicked
+        //create button to call SetFinalAlarmTime and set currentFinalAlarm equal to it when clicked
+        //
+        //
+        //
+        //
+        //
 
         return currentFinalAlarm;
     }
