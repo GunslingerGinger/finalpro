@@ -12,6 +12,8 @@ import android.widget.TimePicker;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import java.util.ArrayList;
+
 public class intro extends AppCompatActivity {
 
     TextClock currentTime;
@@ -31,6 +33,11 @@ public class intro extends AppCompatActivity {
             public void run() {
                 if (enableAlarms()) {
                     String[] currentHourAndMinute = currentTime.getText().toString().split(":");
+                    Integer firstPartAsInt = Integer.parseInt(currentHourAndMinute[0]);
+                    if (currentHourAndMinute[1].contains("PM")) {
+                        firstPartAsInt += 12;
+                    }
+                    currentHourAndMinute[0] = firstPartAsInt.toString();
                     currentHourAndMinute[1] = currentHourAndMinute[1].substring(0,2);
                     String currentTimeAsString = currentHourAndMinute[0] + currentHourAndMinute[1];
                     int currentTimeAsInt = Integer.parseInt(currentTimeAsString);
@@ -66,25 +73,48 @@ public class intro extends AppCompatActivity {
         }
     }
     public boolean enableAlarms() {
-        //create a button that switches between and displays on or off, for if alarms are active or not
+        boolean alarmOnOrOff = false;
+
+        //create a button that switches between and displays on or off and sets alarmOnOrOff to true
+        //or false accordingly. This controls alarms working or not.
+
+        return alarmOnOrOff;
     }
-    public int[] allAlarmTimesAsInts() {
+    public ArrayList<Integer> allAlarmTimesAsInts() {
+        ArrayList<Integer> nothing = new ArrayList<>();
         if (currentStartAlarmTime().equals("") || currentFinalAlarmTime().equals("")) {
-            int[] nothing = new int[0];
             return nothing;
         }
 
         String[] currentStartHourAndMinute = currentStartAlarmTime().split(":");
+        Integer firstStartPartAsInt = Integer.parseInt(currentStartHourAndMinute[0]);
+        if (currentStartHourAndMinute[1].contains("PM")) {
+            firstStartPartAsInt += 12;
+        }
+        currentStartHourAndMinute[0] = firstStartPartAsInt.toString();
         currentStartHourAndMinute[1] = currentStartHourAndMinute[1].substring(0,2);
         String currentStartTimeAsString = currentStartHourAndMinute[0] + currentStartHourAndMinute[1];
         int currentStartTimeAsInt = Integer.parseInt(currentStartTimeAsString);
 
         String[] currentFinalHourAndMinute = currentFinalAlarmTime().split(":");
+        Integer firstFinalPartAsInt = Integer.parseInt(currentFinalHourAndMinute[0]);
+        if (currentFinalHourAndMinute[1].contains("PM")) {
+            firstFinalPartAsInt += 12;
+        }
+        currentFinalHourAndMinute[0] = firstFinalPartAsInt.toString();
         currentFinalHourAndMinute[1] = currentFinalHourAndMinute[1].substring(0,2);
         String currentFinalTimeAsString = currentFinalHourAndMinute[0] + currentFinalHourAndMinute[1];
         int currentFinalTimeAsInt = Integer.parseInt(currentFinalTimeAsString);
         if (currentStartTimeAsInt == currentFinalTimeAsInt) {
-            String
+            ArrayList<Integer> singleAlarm = new ArrayList<>();
+            singleAlarm.add(currentStartTimeAsInt);
+            return singleAlarm;
+        }
+        ArrayList<Integer> allAlarms = new ArrayList<>();
+        int tempForAddingToString = currentStartTimeAsInt;
+        while (tempForAddingToString != currentFinalTimeAsInt) {
+            if (tempForAddi)
+                tempForAddingToString++;
         }
     }
     public String currentStartAlarmTime() {
