@@ -99,9 +99,12 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="622dp" />
+        android:layout_height="19dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="44dp"
+        android:text="current"
+        app:layout_constraintBottom_toTopOf="@+id/buttonf"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

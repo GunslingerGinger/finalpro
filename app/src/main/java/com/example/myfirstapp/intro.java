@@ -85,25 +85,17 @@ public class intro extends AppCompatActivity {
         findViewById(R.id.start).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentStartAlarm = setStartAlarmTime();
+                currentStartAlarmInt = currentStartAlarmTime();
             }
         });
         findViewById(R.id.buttonf).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                currentFinalAlarm = setEndAlarmTime();
+                currentFinalAlarmInt = currentFinalAlarmTime();
             }
         });
-        alarmSpacing = findViewById(R.id.space);
-        findViewById(R.id.mko).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spacingBetweenAlarms();
-            }
-        });
-        alarmSpacing = findViewById(R.id.mko);
         TextView me = findViewById(R.id.textView2);
-        me.setText(alarmSpace);
+        me.setText(alarmSpace.toString());
     }
     public int spacingBetweenAlarms() {
         String space = alarmSpacing.getText().toString().trim();
