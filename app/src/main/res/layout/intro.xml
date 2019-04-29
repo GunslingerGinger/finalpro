@@ -72,7 +72,7 @@
     <EditText
         android:layout_width="121dp"
         android:layout_height="52dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="604dp"
         android:hint="setalarmspace"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="160dp" />
@@ -84,5 +84,13 @@
         android:text="setfinalalarmtime"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="682dp" />
+
+    <Button
+        android:id="@+id/mko"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:text="comfirm"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="603dp" />
 
 </android.support.constraint.ConstraintLayout>

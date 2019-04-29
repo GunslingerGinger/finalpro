@@ -92,6 +92,12 @@ public class intro extends AppCompatActivity {
             }
         });
         alarmSpacing = findViewById(R.id.space);
+        findViewById(R.id.mko).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spacingBetweenAlarms();
+            }
+        });
     }
     public int spacingBetweenAlarms() {
         String space = alarmSpacing.getText().toString().trim();
