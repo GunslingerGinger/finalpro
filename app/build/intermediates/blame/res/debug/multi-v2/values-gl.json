@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
+            "outputFile": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ajack\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\8e32b21a7e22b58b080a7f0170d0fcc4\\res\\values-gl\\values-gl.xml",

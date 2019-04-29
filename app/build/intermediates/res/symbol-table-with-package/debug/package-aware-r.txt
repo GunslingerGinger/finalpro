@@ -693,6 +693,8 @@ id button
 id button3
 id button4
 id buttonPanel
+id buttonf
+id calendarView
 id center
 id center_horizontal
 id center_vertical
@@ -741,6 +743,7 @@ id listMode
 id list_item
 id message
 id middle
+id mko
 id multiply
 id never
 id none
@@ -748,6 +751,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id off
+id on
 id packed
 id parent
 id parentPanel
@@ -756,6 +761,7 @@ id progress_circular
 id progress_horizontal
 id quit
 id radio
+id ratingBar
 id relativeLayout
 id right
 id right_icon
@@ -779,6 +785,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id space
 id spacer
 id split_action_bar
 id spread
@@ -800,6 +807,7 @@ id textClock
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
+id textView2
 id textView3
 id time
 id timePicker

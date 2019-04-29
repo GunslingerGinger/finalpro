@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro2\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "5,4,2,3,7,6",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "204,157,57,105,291,250",
+                        "endColumns": "44,45,46,50,38,39",
+                        "endOffsets": "244,198,99,151,325,285"
+                    },
+                    "to": {
+                        "startLines": "141,154,155,156,199,200",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "6744,7749,7795,7842,10663,10702",
+                        "endColumns": "44,45,46,50,38,39",
+                        "endOffsets": "6784,7790,7837,7888,10697,10737"
+                    }
+                },
                 {
                     "source": "C:\\Users\\ajack\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\cb25f57041881e591c2f0ce1ffdee53a\\res\\values\\values.xml",
                     "from": {
@@ -42,7 +59,26 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro\\app\\src\\main\\res\\values\\dimens.xml",
+                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro2\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "376"
+                    },
+                    "to": {
+                        "startLines": "393",
+                        "startColumns": "4",
+                        "startOffsets": "23530",
+                        "endLines": "398",
+                        "endColumns": "12",
+                        "endOffsets": "23844"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro2\\app\\src\\main\\res\\values\\dimens.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -78,7 +114,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro2\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "3,1,2",
                         "startColumns": "4,4,4",
@@ -92,23 +128,6 @@
                         "startOffsets": "20054,22857,22907",
                         "endColumns": "44,49,56",
                         "endOffsets": "20094,22902,22959"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "5,4,2,3,7,6",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "204,157,57,105,291,250",
-                        "endColumns": "44,45,46,50,38,39",
-                        "endOffsets": "244,198,99,151,325,285"
-                    },
-                    "to": {
-                        "startLines": "141,154,155,156,199,200",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "6744,7749,7795,7842,10663,10702",
-                        "endColumns": "44,45,46,50,38,39",
-                        "endOffsets": "6784,7790,7837,7888,10697,10737"
                     }
                 },
                 {
@@ -128,25 +147,6 @@
                         "endLines": "15,1859,2566,2655",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "720,122836,166773,171984"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ajack\\AndroidStudioProjects\\finalpro\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
-                    },
-                    "to": {
-                        "startLines": "393",
-                        "startColumns": "4",
-                        "startOffsets": "23530",
-                        "endLines": "398",
-                        "endColumns": "12",
-                        "endOffsets": "23844"
                     }
                 }
             ]

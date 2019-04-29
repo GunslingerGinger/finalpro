@@ -25,6 +25,8 @@ public class intro extends AppCompatActivity {
     String currentFinalAlarm = "";
     EditText alarmSpacing;
     Integer alarmSpace = 5;
+    Integer currentStartAlarmInt = -1;
+    Integer currentFinalAlarmInt = -1;
 
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,77 +145,71 @@ public class intro extends AppCompatActivity {
     }
     public ArrayList<Integer> allAlarmTimesAsInts() {
         ArrayList<Integer> nothing = new ArrayList<>();
-        if (currentStartAlarmTime().equals("") || currentFinalAlarmTime().equals("")) {
+        if (currentStartAlarmTime().equals(-1) || currentFinalAlarmTime().equals(-1)) {
             return nothing;
         }
-
-        String[] currentStartHourAndMinute = currentStartAlarmTime().split(":");
-        Integer firstStartPartAsInt = Integer.parseInt(currentStartHourAndMinute[0]);
-        if (currentStartHourAndMinute[1].contains("PM")) {
-            firstStartPartAsInt += 12;
-        }
-        currentStartHourAndMinute[0] = firstStartPartAsInt.toString();
-        currentStartHourAndMinute[1] = currentStartHourAndMinute[1].substring(0,2);
-        String currentStartTimeAsString = currentStartHourAndMinute[0] + currentStartHourAndMinute[1];
-        int currentStartTimeAsInt = Integer.parseInt(currentStartTimeAsString);
-
-        String[] currentFinalHourAndMinute = currentFinalAlarmTime().split(":");
-        Integer firstFinalPartAsInt = Integer.parseInt(currentFinalHourAndMinute[0]);
-        if (currentFinalHourAndMinute[1].contains("PM")) {
-            firstFinalPartAsInt += 12;
-        }
-        currentFinalHourAndMinute[0] = firstFinalPartAsInt.toString();
-        currentFinalHourAndMinute[1] = currentFinalHourAndMinute[1].substring(0,2);
-        String currentFinalTimeAsString = currentFinalHourAndMinute[0] + currentFinalHourAndMinute[1];
-        int currentFinalTimeAsInt = Integer.parseInt(currentFinalTimeAsString);
-        if (currentStartTimeAsInt == currentFinalTimeAsInt) {
+        if (currentStartAlarmInt.equals(currentFinalAlarmInt)) {
             ArrayList<Integer> singleAlarm = new ArrayList<>();
-            singleAlarm.add(currentStartTimeAsInt);
+            singleAlarm.add(currentStartAlarmInt);
             return singleAlarm;
         }
         ArrayList<Integer> allAlarms = new ArrayList<>();
-        int differenceInTimes = (currentFinalTimeAsInt - currentStartTimeAsInt);
+        int differenceInTimes = (currentFinalAlarmInt - currentStartAlarmInt);
         if (differenceInTimes < 0) {
             differenceInTimes += 2400;
         }
         int numberOfAlarms = differenceInTimes / spacingBetweenAlarms();
         if (numberOfAlarms == 0) {
             ArrayList<Integer> singleAlarm = new ArrayList<>();
-            singleAlarm.add(currentStartTimeAsInt);
+            singleAlarm.add(currentStartAlarmInt);
             return singleAlarm;
         }
         for (int i = 0; i <= numberOfAlarms; i++) {
             int toAdd;
-            if (currentStartTimeAsInt + (i * spacingBetweenAlarms()) < 2400) {
-                toAdd = currentStartTimeAsInt + (i * spacingBetweenAlarms());
+            if (currentStartAlarmInt + (i * spacingBetweenAlarms()) < 2400) {
+                toAdd = currentStartAlarmInt + (i * spacingBetweenAlarms());
             } else {
-                toAdd = currentStartTimeAsInt + (i * spacingBetweenAlarms()) - 2400;
+                toAdd = currentStartAlarmInt + (i * spacingBetweenAlarms()) - 2400;
             }
             allAlarms.add(toAdd);
         }
         return allAlarms;
     }
-    public String currentStartAlarmTime() {
+    public Integer currentStartAlarmTime() {
 
-        //create button to call SetStartAlarmTime and set currentStartAlarm equal to it when clicked
+        // old version: create button to call SetStartAlarmTime and set currentStartAlarm equal
+        // to it when clicked
         //
         //
-        //
-        //
-        //
+        //instead, create button to do this when clicked in order to set currentStartAlarmInt:
+        String currentHour = alarmTime.getCurrentHour().toString();
+        Integer currentMinute = alarmTime.getCurrentMinute();
+        String currentMinuteAsString = currentMinute.toString();
+        if (currentMinute < 10) {
+            currentMinuteAsString += 0;
+        }
+        String combinedHourAndMin = currentHour + currentMinuteAsString;
+        currentStartAlarmInt = Integer.parseInt(combinedHourAndMin);
+        return currentStartAlarmInt;
 
-        return currentStartAlarm;
+        // return currentStartAlarm; (this is useless now)
     }
-    public String currentFinalAlarmTime() {
+    public Integer currentFinalAlarmTime() {
 
-        //create button to call SetFinalAlarmTime and set currentFinalAlarm equal to it when clicked
+        String currentHour = alarmTime.getCurrentHour().toString();
+        Integer currentMinute = alarmTime.getCurrentMinute();
+        String currentMinuteAsString = currentMinute.toString();
+        if (currentMinute < 10) {
+            currentMinuteAsString += 0;
+        }
+        String combinedHourAndMin = currentHour + currentMinuteAsString;
+        currentFinalAlarmInt = Integer.parseInt(combinedHourAndMin);
+        return currentFinalAlarmInt;
         //
-        //
-        //
+        //create button to do this when clicked in order to set currentFinalAlarmInt;
         //
         //
 
-        return currentFinalAlarm;
     }
     public String setStartAlarmTime() {
         int hour = alarmTime.getCurrentHour();
