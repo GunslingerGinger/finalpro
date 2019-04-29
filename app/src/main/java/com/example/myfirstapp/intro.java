@@ -111,16 +111,31 @@ public class intro extends AppCompatActivity {
             return singleAlarm;
         }
         ArrayList<Integer> allAlarms = new ArrayList<>();
-        int tempForAddingToString = currentStartTimeAsInt;
-        while (tempForAddingToString != currentFinalTimeAsInt) {
-            if (tempForAddi)
-                tempForAddingToString++;
+        int differenceInTimes = (currentFinalTimeAsInt - currentStartTimeAsInt);
+        if (differenceInTimes < 0) {
+            differenceInTimes += 2400;
         }
+        int numberOfAlarms = differenceInTimes / spacingBetweenAlarms();
+        if (numberOfAlarms == 0) {
+            ArrayList<Integer> singleAlarm = new ArrayList<>();
+            singleAlarm.add(currentStartTimeAsInt);
+            return singleAlarm;
+        }
+        for (int i = 0; i <= numberOfAlarms; i++) {
+            int toAdd;
+            if (currentStartTimeAsInt + (i * spacingBetweenAlarms()) < 2400) {
+                toAdd = currentStartTimeAsInt + (i * spacingBetweenAlarms());
+            } else {
+                toAdd = currentStartTimeAsInt + (i * spacingBetweenAlarms()) - 2400;
+            }
+            allAlarms.add(toAdd);
+        }
+        return allAlarms;
     }
     public String currentStartAlarmTime() {
         String currentStartAlarm = "";
 
-        //create button to call SetStartAlarmTime and set currentstartalarm equal to it when clicked
+        //create button to call SetStartAlarmTime and set currentStartAlarm equal to it when clicked
 
         return currentStartAlarm;
     }
