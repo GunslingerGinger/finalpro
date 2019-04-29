@@ -29,10 +29,17 @@ public class intro extends AppCompatActivity {
         checkTime.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                if (currentTime.getText().toString().equals(AlarmTime())) {
-                    simpleRingtone.play();
-                } else {
-                    simpleRingtone.stop();
+                if (enableAlarms()) {
+                    String[] currentHourAndMinute = currentTime.getText().toString().split(":");
+                    currentHourAndMinute[1] = currentHourAndMinute[1].substring(0,2);
+                    String currentTimeAsString = currentHourAndMinute[0] + currentHourAndMinute[1];
+                    int currentTimeAsInt = Integer.parseInt(currentTimeAsString);
+                    if (currentTimeAsInt > firstSetTimeAsInt && currentTimeAsInt < lastSetTimeAsInt) {
+                        if ()
+                            simpleRingtone.play();
+                    } else {
+                        simpleRingtone.stop();
+                    }
                 }
             }
         }, 0, 2000);
@@ -43,7 +50,76 @@ public class intro extends AppCompatActivity {
             }
         });
     }
-    public String AlarmTime() {
+    public int spacingBetweenAlarms() {
+        Integer alarmSpacing = 5;
+
+        //create textbox to set alarmSpacing when typed in
+
+        if (!(alarmSpacing instanceof Integer)) {
+            alarmSpacing = 5;
+        }
+        if (alarmSpacing > 1438) {
+            alarmSpacing = 1438;
+        }
+        if (alarmSpacing < 1) {
+            alarmSpacing = 1;
+        }
+    }
+    public boolean enableAlarms() {
+        //create a button that switches between and displays on or off, for if alarms are active or not
+    }
+    public int[] allAlarmTimesAsInts() {
+        if (currentStartAlarmTime().equals("") || currentFinalAlarmTime().equals("")) {
+            int[] nothing = new int[0];
+            return nothing;
+        }
+
+        String[] currentStartHourAndMinute = currentStartAlarmTime().split(":");
+        currentStartHourAndMinute[1] = currentStartHourAndMinute[1].substring(0,2);
+        String currentStartTimeAsString = currentStartHourAndMinute[0] + currentStartHourAndMinute[1];
+        int currentStartTimeAsInt = Integer.parseInt(currentStartTimeAsString);
+
+        String[] currentFinalHourAndMinute = currentFinalAlarmTime().split(":");
+        currentFinalHourAndMinute[1] = currentFinalHourAndMinute[1].substring(0,2);
+        String currentFinalTimeAsString = currentFinalHourAndMinute[0] + currentFinalHourAndMinute[1];
+        int currentFinalTimeAsInt = Integer.parseInt(currentFinalTimeAsString);
+        if (currentStartTimeAsInt == currentFinalTimeAsInt) {
+            String
+        }
+    }
+    public String currentStartAlarmTime() {
+        String currentStartAlarm = "";
+
+        //create button to call SetStartAlarmTime and set currentstartalarm equal to it when clicked
+
+        return currentStartAlarm;
+    }
+    public String currentFinalAlarmTime() {
+        String currentFinalAlarm = "";
+
+        //create button to call SetFinalAlarmTime and set currentfinalalarm equal to it when clicked
+
+        return currentFinalAlarm;
+    }
+    public String setStartAlarmTime() {
+        int hour = alarmTime.getCurrentHour();
+        int minute = alarmTime.getCurrentMinute();
+        String minuteString;
+        if (minute < 10) {
+            minuteString = "0" + minute;
+        } else {
+            minuteString = minute + "";
+        }
+        String alarmTimeAsString;
+        if (hour > 12) {
+            hour = hour - 12;
+            alarmTimeAsString = (hour + ":" + minuteString + " PM");
+        } else {
+            alarmTimeAsString = (hour + ":" + minuteString + " AM");
+        }
+        return alarmTimeAsString;
+    }
+    public String setEndAlarmTime() {
         int hour = alarmTime.getCurrentHour();
         int minute = alarmTime.getCurrentMinute();
         String minuteString;
