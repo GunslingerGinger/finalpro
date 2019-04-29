@@ -6,6 +6,7 @@ import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextClock;
 import android.widget.TimePicker;
 
@@ -18,6 +19,11 @@ public class intro extends AppCompatActivity {
 
     TextClock currentTime;
     TimePicker alarmTime;
+    boolean alarmOnOrOff = false;
+    String currentStartAlarm = "";
+    String currentFinalAlarm = "";
+    EditText alarmSpacing;
+    Integer alarmSpace = 5;
 
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,29 +67,60 @@ public class intro extends AppCompatActivity {
                 hui();
             }
         });
+        findViewById(R.id.off).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmOnOrOff = false;
+            }
+        });
+        findViewById(R.id.on).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmOnOrOff = true;
+            }
+        });
+        findViewById(R.id.start).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentStartAlarm = setStartAlarmTime();
+            }
+        });
+        findViewById(R.id.buttonf).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentFinalAlarm = setEndAlarmTime();
+            }
+        });
+        alarmSpacing = findViewById(R.id.space);
     }
     public int spacingBetweenAlarms() {
-        Integer alarmSpacing = 5;
-
+        String space = alarmSpacing.getText().toString().trim();
+        if (space.isEmpty()) {
+            alarmSpacing.setError("this can't be empty");
+        } else {
+            alarmSpacing.setError(null);
+        }
+        int a = Integer.parseInt(space);
+        alarmSpace = new Integer(a);
         //create textbox to set alarmSpacing to a value when typed in
         //
         //
         //
         //
 
-        if (!(alarmSpacing instanceof Integer)) {
-            alarmSpacing = 5;
+        if (!(alarmSpace instanceof Integer)) {
+            alarmSpace = 5;
         }
-        if (alarmSpacing > 1438) {
-            alarmSpacing = 1438;
+        if (alarmSpace > 1438) {
+            alarmSpace = 1438;
         }
-        if (alarmSpacing < 1) {
-            alarmSpacing = 1;
+        if (alarmSpace < 1) {
+            alarmSpace = 1;
         }
-        return alarmSpacing;
+        return alarmSpace;
     }
     public boolean enableAlarms() {
-        boolean alarmOnOrOff = false;
+
 
         //create a button that switches between and displays on or off and sets alarmOnOrOff to true
         //or false accordingly. This controls alarms working or not.
@@ -147,7 +184,6 @@ public class intro extends AppCompatActivity {
         return allAlarms;
     }
     public String currentStartAlarmTime() {
-        String currentStartAlarm = "";
 
         //create button to call SetStartAlarmTime and set currentStartAlarm equal to it when clicked
         //
@@ -159,7 +195,6 @@ public class intro extends AppCompatActivity {
         return currentStartAlarm;
     }
     public String currentFinalAlarmTime() {
-        String currentFinalAlarm = "";
 
         //create button to call SetFinalAlarmTime and set currentFinalAlarm equal to it when clicked
         //
