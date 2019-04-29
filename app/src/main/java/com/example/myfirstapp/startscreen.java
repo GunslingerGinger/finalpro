@@ -55,9 +55,9 @@ public class startscreen extends AppCompatActivity {
         });
         ImageView jin = findViewById(R.id.imageView);
         jin.setVisibility(View.INVISIBLE);
-        final Button me = findViewById(R.id.button2);
+        final Button me = findViewById(R.id.button4);
         me.setVisibility(View.VISIBLE);
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findViewById(R.id.imageView).setVisibility(View.VISIBLE);

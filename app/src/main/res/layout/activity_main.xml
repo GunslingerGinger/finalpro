@@ -51,33 +51,32 @@
         android:id="@+id/imageButton5"
         android:layout_width="66dp"
         android:layout_height="69dp"
-        app:srcCompat="@drawable/like"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="646dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:text="the most handsome person in the world"
-        tools:layout_editor_absoluteX="740dp"
-        tools:layout_editor_absoluteY="282dp" />
+        android:layout_marginStart="310dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="646dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/like" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:layout_marginTop="686dp"
         android:text="✍😍Help me!!!"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="686dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="130dp"
         android:text="show handsome"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="130dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"

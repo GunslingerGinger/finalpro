@@ -30,6 +30,11 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.myfirstapp.instruction" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

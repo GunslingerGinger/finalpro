@@ -55,9 +55,9 @@ public class intro extends AppCompatActivity {
         String alarmTimeAsString;
         if (hour > 12) {
             hour = hour - 12;
-            alarmTimeAsString = (hour + " : " + minuteString + " PM");
+            alarmTimeAsString = (hour + ":" + minuteString + " PM");
         } else {
-            alarmTimeAsString = (hour + " : " + minuteString + " PM");
+            alarmTimeAsString = (hour + ":" + minuteString + " AM");
         }
         return alarmTimeAsString;
     }
