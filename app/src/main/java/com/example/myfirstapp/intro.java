@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextClock;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Timer;
@@ -98,6 +99,9 @@ public class intro extends AppCompatActivity {
                 spacingBetweenAlarms();
             }
         });
+        alarmSpacing = findViewById(R.id.mko);
+        TextView me = findViewById(R.id.textView2);
+        me.setText(alarmSpace);
     }
     public int spacingBetweenAlarms() {
         String space = alarmSpacing.getText().toString().trim();
