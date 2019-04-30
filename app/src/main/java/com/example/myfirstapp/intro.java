@@ -121,6 +121,21 @@ public class intro extends AppCompatActivity {
                 me.setText(alarmSpace.toString());
             }
         });
+
+        findViewById(R.id.button6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmSpace = new Integer(15);
+                me.setText(alarmSpace.toString());
+            }
+        });
+        findViewById(R.id.button7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmSpace = new Integer(30);
+                me.setText(alarmSpace.toString());
+            }
+        });
     }
     public int spacingBetweenAlarms() {
 
