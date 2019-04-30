@@ -155,7 +155,7 @@ public class intro extends AppCompatActivity {
     }
     public ArrayList<Integer> allAlarmTimesAsInts() {
         ArrayList<Integer> nothing = new ArrayList<>();
-        if (currentStartAlarmTime().equals(-1) || currentFinalAlarmTime().equals(-1)) {
+        if (currentStartAlarmInt.equals(-1) || currentFinalAlarmInt.equals(-1)) {
             return nothing;
         }
         if (currentStartAlarmInt.equals(currentFinalAlarmInt)) {
