@@ -42,8 +42,11 @@ public class intro extends AppCompatActivity {
                 if (enableAlarms()) {
                     String[] currentHourAndMinute = currentTime.getText().toString().split(":");
                     Integer firstPartAsInt = Integer.parseInt(currentHourAndMinute[0]);
-                    if (currentHourAndMinute[1].contains("PM")) {
+                    if (currentHourAndMinute[1].contains("PM") && firstPartAsInt != 12) {
                         firstPartAsInt += 12;
+                    }
+                    if (currentHourAndMinute[1].contains("AM") && firstPartAsInt == 12) {
+                        firstPartAsInt -= 12;
                     }
                     currentHourAndMinute[0] = firstPartAsInt.toString();
                     currentHourAndMinute[1] = currentHourAndMinute[1].substring(0,2);
