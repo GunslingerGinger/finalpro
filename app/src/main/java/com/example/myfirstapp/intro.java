@@ -64,7 +64,7 @@ public class intro extends AppCompatActivity {
                     simpleRingtone.stop();
                 }
             }
-        }, 0, 2000);
+        }, 0, 1000);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
