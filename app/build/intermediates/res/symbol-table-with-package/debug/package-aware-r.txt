@@ -694,6 +694,8 @@ id button2
 id button3
 id button4
 id button5
+id button6
+id button7
 id buttonPanel
 id buttonf
 id center
@@ -812,6 +814,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id time
 id timePicker
 id title
