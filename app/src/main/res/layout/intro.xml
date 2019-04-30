@@ -13,15 +13,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginBottom="272dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextClock
         android:id="@+id/textClock"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="37dp"
+        android:layout_width="261dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="130dp"
         android:layout_marginRight="130dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,79 +32,106 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
+        android:layout_marginTop="16dp"
         android:text="back"
         app:layout_constraintEnd_toStartOf="@+id/textClock"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/off"
         android:layout_width="52dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginRight="127dp"
         android:text="off"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker" />
 
     <Button
         android:id="@+id/on"
         android:layout_width="48dp"
         android:layout_height="49dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="552dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginLeft="149dp"
+        android:layout_marginTop="11dp"
         android:text="on"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/timePicker" />
 
     <Button
         android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="171dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="105dp"
         android:text="setstartalarmtime"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="682dp" />
-
-    <EditText
-        android:id="@+id/mko"
-        android:layout_width="121dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="604dp"
-        android:hint="setalarmspace"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="160dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/buttonf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="176dp"
         android:text="setfinalalarmtime"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="682dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/mko"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="73dp"
-        android:layout_marginRight="73dp"
-        android:text="comfirm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/off" />
+        android:layout_width="27dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@+id/timePicker"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
         android:text="current"
-        app:layout_constraintBottom_toTopOf="@+id/buttonf"
+        app:layout_constraintEnd_toStartOf="@+id/timePicker"
+        app:layout_constraintTop_toBottomOf="@+id/mko" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="34dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@+id/timePicker"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="48dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="10"
+        app:layout_constraintEnd_toStartOf="@+id/timePicker"
+        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="11dp"
+        android:text="time spacing"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

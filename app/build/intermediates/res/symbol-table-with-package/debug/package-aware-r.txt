@@ -690,11 +690,12 @@ id beginning
 id blocking
 id bottom
 id button
+id button2
 id button3
 id button4
+id button5
 id buttonPanel
 id buttonf
-id calendarView
 id center
 id center_horizontal
 id center_vertical
@@ -761,7 +762,6 @@ id progress_circular
 id progress_horizontal
 id quit
 id radio
-id ratingBar
 id relativeLayout
 id right
 id right_icon
@@ -809,6 +809,7 @@ id textSpacerNoTitle
 id textView
 id textView2
 id textView3
+id textView4
 id time
 id timePicker
 id title

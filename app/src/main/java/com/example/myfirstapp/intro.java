@@ -23,7 +23,6 @@ public class intro extends AppCompatActivity {
     boolean alarmOnOrOff = false;
     String currentStartAlarm = "";
     String currentFinalAlarm = "";
-    EditText alarmSpacing;
     Integer alarmSpace = 5;
     Integer currentStartAlarmInt = -1;
     Integer currentFinalAlarmInt = -1;
@@ -61,6 +60,8 @@ public class intro extends AppCompatActivity {
                     if (checkThatATimeMatched == 0) {
                         simpleRingtone.stop();
                     }
+                } else {
+                    simpleRingtone.stop();
                 }
             }
         }, 0, 2000);
@@ -94,18 +95,32 @@ public class intro extends AppCompatActivity {
                 currentFinalAlarmInt = currentFinalAlarmTime();
             }
         });
-        TextView me = findViewById(R.id.textView2);
+        final TextView me = findViewById(R.id.textView2);
         me.setText(alarmSpace.toString());
+        findViewById(R.id.mko).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmSpace = new Integer(1);
+                me.setText(alarmSpace.toString());
+            }
+        });
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmSpace = new Integer(5);
+                me.setText(alarmSpace.toString());
+            }
+        });
+        findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmSpace = new Integer(10);
+                me.setText(alarmSpace.toString());
+            }
+        });
     }
     public int spacingBetweenAlarms() {
-        String space = alarmSpacing.getText().toString().trim();
-        if (space.isEmpty()) {
-            alarmSpacing.setError("this can't be empty");
-        } else {
-            alarmSpacing.setError(null);
-        }
-        int a = Integer.parseInt(space);
-        alarmSpace = new Integer(a);
+
         //create textbox to set alarmSpacing to a value when typed in
         //
         //
@@ -178,7 +193,7 @@ public class intro extends AppCompatActivity {
         Integer currentMinute = alarmTime.getCurrentMinute();
         String currentMinuteAsString = currentMinute.toString();
         if (currentMinute < 10) {
-            currentMinuteAsString += 0;
+            currentMinuteAsString = currentMinuteAsString + "0";
         }
         String combinedHourAndMin = currentHour + currentMinuteAsString;
         currentStartAlarmInt = Integer.parseInt(combinedHourAndMin);
@@ -192,7 +207,7 @@ public class intro extends AppCompatActivity {
         Integer currentMinute = alarmTime.getCurrentMinute();
         String currentMinuteAsString = currentMinute.toString();
         if (currentMinute < 10) {
-            currentMinuteAsString += 0;
+            currentMinuteAsString = currentMinuteAsString + "0";
         }
         String combinedHourAndMin = currentHour + currentMinuteAsString;
         currentFinalAlarmInt = Integer.parseInt(combinedHourAndMin);

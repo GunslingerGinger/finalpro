@@ -87,18 +87,4 @@
         app:srcCompat="@drawable/me"
         tools:layout_editor_absoluteX="0dp" />
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="116dp" />
-
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="668dp" />
-
 </android.support.constraint.ConstraintLayout>
