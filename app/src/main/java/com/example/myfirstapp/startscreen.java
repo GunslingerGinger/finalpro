@@ -53,17 +53,15 @@ public class startscreen extends AppCompatActivity {
                         "♥++!!!", Toast.LENGTH_SHORT).show();
             }
         });
-        ImageView jin = findViewById(R.id.imageView);
-        jin.setVisibility(View.INVISIBLE);
-        final Button me = findViewById(R.id.button4);
-        me.setVisibility(View.VISIBLE);
+        findViewById(R.id.imageView).setVisibility(View.INVISIBLE);
+        findViewById(R.id.button4).setVisibility(View.VISIBLE);
         findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findViewById(R.id.imageView).setVisibility(View.VISIBLE);
                 Toast.makeText((getApplicationContext()),
-                        "Jincheng!!!!", Toast.LENGTH_LONG).show();
-                me.setVisibility(View.INVISIBLE);
+                        "Hi!", Toast.LENGTH_LONG).show();
+                findViewById(R.id.button4).setVisibility(View.INVISIBLE);
             }
         });
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {

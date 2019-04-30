@@ -211,7 +211,7 @@ public class intro extends AppCompatActivity {
         Integer currentMinute = alarmTime.getCurrentMinute();
         String currentMinuteAsString = currentMinute.toString();
         if (currentMinute < 10) {
-            currentMinuteAsString = currentMinuteAsString + "0";
+            currentMinuteAsString = "0" + currentMinuteAsString;
         }
         String combinedHourAndMin = currentHour + currentMinuteAsString;
         currentStartAlarmInt = Integer.parseInt(combinedHourAndMin);
@@ -225,7 +225,7 @@ public class intro extends AppCompatActivity {
         Integer currentMinute = alarmTime.getCurrentMinute();
         String currentMinuteAsString = currentMinute.toString();
         if (currentMinute < 10) {
-            currentMinuteAsString = currentMinuteAsString + "0";
+            currentMinuteAsString = "0" + currentMinuteAsString;
         }
         String combinedHourAndMin = currentHour + currentMinuteAsString;
         currentFinalAlarmInt = Integer.parseInt(combinedHourAndMin);
