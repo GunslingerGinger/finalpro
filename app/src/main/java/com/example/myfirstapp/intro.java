@@ -103,7 +103,7 @@ public class intro extends AppCompatActivity {
         findViewById(R.id.mko).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alarmSpace = new Integer(1);
+                alarmSpace = new Integer(2);
                 me.setText(alarmSpace.toString());
             }
         });
